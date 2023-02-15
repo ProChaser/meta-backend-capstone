@@ -18,6 +18,6 @@ urlpatterns = [
         # })),
         
     # dubious instructions...
-    # tokens are already issued through the api paths...
+    # tokens are already issued through the api paths.  kepp just in case for now.
     path('api-token-auth/', obtain_auth_token),
 ]
