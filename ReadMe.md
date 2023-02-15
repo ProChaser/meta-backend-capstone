@@ -40,18 +40,18 @@ Endpoints that require an authentication token have been indicated in the table 
 
 | Endpoint | Method | Token Required | Client Payload | Expected Behavior |
 | --- | --- | --- | --- | --- |
-| user creation and authentication |  |  |  |  |
+| _user creation and authentication_ |  |  |  |  |
 | `/auth/users/` | POST | --- | `username`, `email`, `password` | Creates a new user account. Returns serialized `User` object data. |
 | `/auth/token/login/` | POST | --- | `username`, `password` | Creates an authentication token for the given user.  Returns the generated token. |
-| menu items |  |  |  |  |
+| _menu items_ |  |  |  |  |
 | `/api/menu-items/` | POST | yes | `title`, `price`, `inventory` | Creates new `MenuItem`.  Returns serialized data for `MenuItem` object. |
 | `/api/menu-items/` | GET | yes | --- | Returns an array of serialzed `MenuItem` objects. |
 | `/api/menu-items/<int:pk>` | GET | yes | --- | Returns serialzed `MenuItem` object with the corresponding id. |
 | `/api/menu-items/<int:pk>` | PUT, PATCH | yes | `title`, `price`, `inventory` | Update `MenuItem` object with the corresponding id. |
 | `/api/menu-items/<int:pk>` | DELETE | yes | --- | Remove `MenuItem` object with the corresponding id. |
-| booking |  |  |  |  |
+| _booking_ |  |  |  |  |
 | `/restaurant/bookings/tables/` | GET | yes | --- | Returns array of serialized `Booking` objects. |
 | `/restaurant/bookings/tables/` | POST | yes | `name`, `no_of_guests`, `booking_date` | Reservers a table.  Returns serialized `Booking` object data. |
-| user creation and authentication |  |  |  |  |
+| _user creation and authentication_ |  |  |  |  |
 | `/auth/token/logout/` | GET | yes | --- | Invalidates the token for the associated user.  Returns no payload. |
 
